@@ -1,14 +1,14 @@
 import os
 import shutil
 
-def CreateDir():
+def create_dir():
     name = input("Введите название папки: \n")
     if (os.path.exists(name)):
         print("Такая папка уже создана")
     else:
         os.mkdir(name)
 
-def DeleteDirFile():
+def delete_dirfile():
     name = input("Введите название папки или файла для удаления: \n")
     if (os.path.exists(name)):
         if(os.path.isfile(name)):
@@ -18,7 +18,7 @@ def DeleteDirFile():
     else:
         print("Такой папки или файла не существует")
 
-def CopyDirFile():
+def copy_dirfile():
     name = input("Введите название папки или файла для копирования: \n")
     new_name = input("Введите новое название папки или файла: \n")
     if (os.path.exists(name)):
@@ -29,21 +29,21 @@ def CopyDirFile():
     else:
         print("Такой папки или файла не существует")
 
-def DirAndFile():
+def dirfile():
     return os.listdir()
-def PrintDirFile():
-    print(DirAndFile())
+def print_dirfile():
+    print(dirfile())
 
-def PrintDir():
+def print_dir():
     new_list = []
-    for i in DirAndFile():
+    for i in dirfile():
         if os.path.isdir(i):
             new_list.append(i)
     print(new_list)
 
-def PrintFile():
+def print_file():
     new_list = []
-    for i in DirAndFile():
+    for i in dirfile():
         if os.path.isfile(i):
             new_list.append(i)
     print(new_list)

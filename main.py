@@ -1,4 +1,7 @@
-import DirAndFile as df
+import sys
+import victory
+import bank
+import dir_file as df
 import os
 
 print("Добро пожаловать в файловый менеджер")
@@ -18,27 +21,28 @@ while True:
                         "12 - выход.\n")
     match answer:
         case "1":
-            df.CreateDir()
+            df.create_dir()
         case "2":
-            df.DeleteDirFile()
+            df.delete_dirfile()
         case "3":
-            df.CopyDirFile()
+            df.copy_dirfile()
         case "4":
-            df.PrintDirFile()
+            df.print_dirfile()
         case "5":
-            df.PrintDir()
+            df.print_dir()
         case "6":
-            df.PrintFile()
+            df.print_file()
         case "7":
-            os.uname()
+            print(sys.platform)
         case "8":
-            pass
+            print("Создатель программы Ронжин Д.А.")
         case "9":
-            pass
+            victory.start_victory()
         case "10":
-            pass
+            bank.banking()
         case "11":
-            pass
+            os.chdir("C:\project")
+            print(f'Текущая рабочая директория - {os.getcwd()}')
         case "12":
             break
         case _:
