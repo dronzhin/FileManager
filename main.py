@@ -1,3 +1,5 @@
+import DirAndFile as df
+import os
 
 print("Добро пожаловать в файловый менеджер")
 while True:
@@ -16,19 +18,19 @@ while True:
                         "12 - выход.\n")
     match answer:
         case "1":
-            pass
+            df.CreateDir()
         case "2":
-            pass
+            df.DeleteDirFile()
         case "3":
-            pass
+            df.CopyDirFile()
         case "4":
-            pass
+            df.PrintDirFile()
         case "5":
-            pass
+            df.PrintDir()
         case "6":
-            pass
+            df.PrintFile()
         case "7":
-            pass
+            os.uname()
         case "8":
             pass
         case "9":
