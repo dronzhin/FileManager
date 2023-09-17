@@ -1,16 +1,43 @@
-# This is a sample Python script.
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print("Добро пожаловать в файловый менеджер")
+while True:
+    answer = input("\nВыбирите необходимую операцию: \n"
+                        "1 - создать папку\n"
+                        "2 - удалить (файл/папку)\n"
+                        "3 - копировать (файл/папку)\n"
+                        "4 - просмотр содержимого рабочей директории\n"
+                        "5 - посмотреть только папки\n"
+                        "6 - посмотреть только файлы\n"
+                        "7 - просмотр информации об операционной системе\n"
+                        "8 - создатель программы\n"
+                        "9 - играть в викторину\n"
+                        "10 - мой банковский счет\n"
+                        "11 - смена рабочей директории (*необязательный пункт)\n"
+                        "12 - выход.\n")
+    match answer:
+        case "1":
+            pass
+        case "2":
+            pass
+        case "3":
+            pass
+        case "4":
+            pass
+        case "5":
+            pass
+        case "6":
+            pass
+        case "7":
+            pass
+        case "8":
+            pass
+        case "9":
+            pass
+        case "10":
+            pass
+        case "11":
+            pass
+        case "12":
+            break
+        case _:
+            print("Введено некорректное значение")
