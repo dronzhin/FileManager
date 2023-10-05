@@ -1,5 +1,6 @@
 import os
 import shutil
+import yaml
 
 def create_dir():
     name = input("Введите название папки: \n")
@@ -31,8 +32,21 @@ def copy_dirfile():
 
 def dirfile():
     return os.listdir()
+
+
 def print_dirfile():
     print(dirfile())
+def create_listdir(path):
+    list_dir = []
+    list_file = []
+    for i in dirfile():
+        if os.path.isdir(i):
+            list_dir.append(i)
+        else:
+            list_file.append(i)
+    result = {'Directory': list_dir, 'File': list_file}
+    with open(path, 'w') as f:
+        yaml.dump(result, f, encoding='utf8')
 
 def print_dir():
     new_list = []
